@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import { remarkReadingTime } from './src/utils/readTime.ts'
+import embeds from 'astro-embed/integration';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
 		}
 	},
 	integrations: [
+		embeds(),
 		mdx({
 			syntaxHighlight: 'shiki',
 			shikiConfig: {
@@ -29,5 +31,6 @@ export default defineConfig({
 		}),
 		sitemap(),
 		tailwind()
+		
 	]
 })
