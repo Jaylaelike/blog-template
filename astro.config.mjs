@@ -7,7 +7,7 @@ import embeds from 'astro-embed/integration';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://blog-template-gray.vercel.app/', // Write here your website url
+	site: 'https://engineering-blog-thaipbs.vercel.app/', // Write here your website url
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
