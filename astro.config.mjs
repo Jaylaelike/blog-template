@@ -5,11 +5,11 @@ import tailwind from '@astrojs/tailwind'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import embeds from 'astro-embed/integration'
 import sentry from "@sentry/astro";
-import vercel from '@astrojs/vercel/serverless'
+import vercel from '@astrojs/vercel/static'
 
 // https://astro.build/config
 export default defineConfig({
-	output: 'hybrid',
+	output: 'server',
 	adapter: vercel({
 		webAnalytics: { enabled: true }
 	}),
