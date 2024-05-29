@@ -33,7 +33,7 @@ export default defineConfig({
 		sitemap(),
 		tailwind()
 	],
-	output: 'server',
+	output: 'dist/pagefind',
 	adapter: vercel({
 		webAnalytics: { enabled: true }
 	})
