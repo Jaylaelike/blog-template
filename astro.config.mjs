@@ -3,7 +3,8 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import { remarkReadingTime } from './src/utils/readTime.ts'
-import embeds from 'astro-embed/integration';
+import embeds from 'astro-embed/integration'
+import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,14 +24,17 @@ export default defineConfig({
 			shikiConfig: {
 				experimentalThemes: {
 					light: 'vitesse-light',
-					dark: 'material-theme-palenight',
-				  },
+					dark: 'material-theme-palenight'
+				},
 				wrap: true
 			},
 			drafts: true
 		}),
 		sitemap(),
 		tailwind()
-		
-	]
+	],
+	output: 'server',
+	adapter: vercel({
+		webAnalytics: { enabled: true }
+	})
 })

@@ -30,6 +30,7 @@ const { page } = Astro.props
 
 const unsluglifyNameCategory = unsluglify(params.category!.toLowerCase())
 const posts = page.data
+export const prerender = true
 ---
 
 <BaseLayout title={params.category}>

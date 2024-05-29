@@ -36,6 +36,8 @@ const relatedPosts = getRelatedPosts(post)
 const { Content, headings, remarkPluginFrontmatter } = await post.render()
 
 const disqusEnabled = disqusConfig.enabled
+
+export const prerender = true
 ---
 
 <BlogPost
